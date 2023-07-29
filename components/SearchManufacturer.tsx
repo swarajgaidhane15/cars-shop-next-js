@@ -7,8 +7,8 @@ import { manufacturers } from "@/constants";
 import { SearchManufacturer } from "@/types";
 
 const SearchManufacturer = ({
-  manufacturer,
-  setManufacturer,
+  selected,
+  setSelected,
 }: SearchManufacturer) => {
   const [query, setQuery] = useState("");
 
@@ -22,13 +22,9 @@ const SearchManufacturer = ({
             .includes(query.toLowerCase().replace(/\s+/g, ""))
         );
 
-  const handleChange = (manufacturer: string) => {
-    setManufacturer(manufacturer);
-  };
-
   return (
     <div className="search-manufacturer">
-      <Combobox value={manufacturer} onChange={setManufacturer}>
+      <Combobox value={selected} onChange={setSelected}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
