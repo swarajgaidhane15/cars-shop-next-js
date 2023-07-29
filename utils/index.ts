@@ -9,7 +9,6 @@ export async function fetchCars(filters: FilterProps) {
     "X-RapidAPI-Key": process.env.RAPID_API_KEY,
     "X-RapidAPI-Host": process.env.RAPID_API_HOST,
   };
-  console.log(headers);
 
   const response = await fetch(
     `${car_api_url}?make=${make}&model=${model}&year=${year}&fuel_type=${fuel}&limit=${limit}`,
