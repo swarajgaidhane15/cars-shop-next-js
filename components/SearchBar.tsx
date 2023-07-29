@@ -56,7 +56,7 @@ const SearchBar = () => {
           name="model"
           value={model}
           onChange={(evt) => setModel(evt.target.value)}
-          placeholder="Hyundai"
+          placeholder="Macan"
           className="searchbar__input"
         />
         <SearchButton disabled={model === ""} otherClasses="sm:hidden" />
